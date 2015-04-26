@@ -1,5 +1,4 @@
-<%= link_to "Back to Posts", posts_url %>
-
+<%= link_to "Back to Posts", posts_url %>  | <%= link_to "Edit", edit_post_path(@post) %>
 <p><%= @post.title %></p>
 <p><%= @post.author %></p>
 <p><img src="<%= @post.url %>"></p>
