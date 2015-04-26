@@ -1,0 +1,23 @@
+<h1>Write new post</h1>
+<%= form_tag "/posts" do %>
+<p>
+    <%= label_tag :title %><br>
+    <%= text_field_tag :title %>
+  </p>
+  <p>
+    <%= label_tag :author %><br>
+    <%= text_field_tag :author %>
+  </p>
+  <p>
+    <%= label_tag :url %><br>
+    <%= text_field_tag :url %>
+  </p>
+
+    <p>
+    <%= label_tag :content %><br>
+    <%= text_field_tag :content %>
+  </p>
+  <p>
+    <%= submit_tag "Save" %>
+  </p>
+<% end %>
