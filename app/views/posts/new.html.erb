@@ -1,23 +1,23 @@
 <h1>Write new post</h1>
-<%= form_tag "/posts" do %>
+<%= form_for(Post.new) do |f| %>
 <p>
-    <%= label_tag :title %><br>
-    <%= text_field_tag :title %>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
   </p>
   <p>
-    <%= label_tag :author %><br>
-    <%= text_field_tag :author %>
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
   </p>
   <p>
-    <%= label_tag :url %><br>
-    <%= text_field_tag :url %>
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
   </p>
 
     <p>
-    <%= label_tag :content %><br>
-    <%= text_field_tag :content %>
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
   </p>
   <p>
-    <%= submit_tag "Save" %>
+    <%= f.submit "Save" %>
   </p>
 <% end %>
