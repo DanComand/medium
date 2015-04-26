@@ -1,4 +1,5 @@
-<%= link_to "Back to Posts", posts_url %>  | <%= link_to "Edit", edit_post_path(@post) %>
+<%= link_to "Back to Posts", posts_url %>  | <%= link_to "Edit", edit_post_path(@post) %> | <%= link_to "Delete", @picture, method: :delete, data: {confirm: "Are you sure you want to delete this picture?"}  %>
+
 <p><%= @post.title %></p>
 <p><%= @post.author %></p>
 <p><img src="<%= @post.url %>"></p>

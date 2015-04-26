@@ -35,6 +35,12 @@ class PostsController < ApplicationController
   	end
   end
 
+  def destroy
+  	@post = Post.find(params[:id])
+  	@post.destroy
+  	redirect_to posts_url
+  end
+
     # render :text => "Saving a picture. Title: #{params[:title]}, Author: #{params[:author]}, url: #{params[:url]}, content: #{params[:content]}"
 
 
