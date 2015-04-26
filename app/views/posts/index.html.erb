@@ -1,1 +1,8 @@
 <h1>Posts</h1>
+
+<% @posts.each do |post| %>
+<p><%= post.title %></p>
+<p><%= post.author %></p>
+<p><img src="<%= post.url %>"></p>
+<p><%= post.content %></p>
+<% end %>
