@@ -1,4 +1,5 @@
 <h1>Write new post</h1>
+<%= link_to "Back to Posts", posts_url %>
 <%= form_for(Post.new) do |f| %>
 <p>
     <%= f.label :title %><br>

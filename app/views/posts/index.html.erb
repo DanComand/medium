@@ -1,8 +1,11 @@
 <h1>Posts</h1>
+<%= link_to "New Post", "/posts/new" %>
+
+
 
 <% @posts.each do |post| %>
 <p><%= post.title %></p>
 <p><%= post.author %></p>
-<p><img src="<%= post.url %>"></p>
-<p><%= post.content %></p>
+<p><%= link_to image_tag(post.url), "/posts/#{post.id}" %></p>
+<!-- <p><%= post.content %></p> -->
 <% end %>
